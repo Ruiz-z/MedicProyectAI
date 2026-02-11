@@ -1,6 +1,6 @@
 .wrapper {
-    /*This is for a width max in big screens  */
-    max-width: 1200;
+    
+    max-width: 1300;
     margin-left: auto;
     margin-right: auto;
 
@@ -9,4 +9,54 @@
 
     box-sizing: border-box;
 
+}
+
+.login-card{
+    background-color: whitesmoke;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 350px;
+    text-align: center;
+}
+
+.login-card h2 {
+    margin-bottom: 25px;
+    color: #020000;
+}
+.login-card p {
+    margin-bottom: 20px;
+    color: #a175e9
+}
+
+
+
+.login-card input {
+    width: 100%;
+    padding: 6px;
+    margin-bottom: 15px;
+    border: 1 px solid #ffffff;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login-card button{
+    width: 100%;
+    padding: 12px;
+    background-color: #6312e6e0;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-card button:hover {
+    background-color: #0056b3;
+}
+
+.login-card a{
+    display: block;
+    margin-top: 15 px;
+    font-size: 14px;
+    color: #007bff;
+    margin-bottom: 12px;
 }
