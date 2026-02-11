@@ -30,24 +30,27 @@ footer{
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    width: 350px;
-    text-align: center;
-   
+    width: 350px; 
+}
+
+.login-card img {
+    display: block;
+    margin: 0 auto 20px auto;
 }
 
 .login-card h2 {
     margin-bottom: 25px;
     color: #020000;
+    text-align: center;
 }
 .login-card p {
     margin-bottom: 20px;
     color: #7c0e97;
+    text-align: center;
 }
 
-
-
 .login-card input {
-    width: 100%;
+    width: 90%;
     padding: 6px;
     margin-bottom: 15px;
     border: 1 px solid #ffffff;
@@ -65,7 +68,7 @@ footer{
 }
 
 .login-card button:hover {
-    background-color: #6312e69a;
+    background-color: #7c0e97de;
 }
 
 .login-card a{
