@@ -227,3 +227,21 @@ header{
 .sidebar.menu-toggle ~ .content{
   padding-left: 18.75rem;
 }
+
+.sidebar-section{
+    margin-top: 25px;
+    padding: 1 1px;
+}
+
+.section-title{
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #9aa3ad;
+    margin-bottom: 10px;
+    padding-left: 30px;
+}
+.sidebar:not(.menu-toggle) .section-title{
+    display: none;
+}
