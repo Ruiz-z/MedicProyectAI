@@ -85,7 +85,28 @@ footer{
     margin-bottom: 12px;
 }
 
+.content{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-bottom: 1px solid white;
+    z-index: 200;
+}
 
+.content h1{
+  margin: 0 auto;
+  top: 1px;
+  left: 10px;
+}
+
+.content p{
+  top: 1px;
+  left: 10px;
+}
 header{
     height: var(--header-h);
     position: fixed;
