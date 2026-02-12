@@ -216,7 +216,7 @@ header{
 }
 
 .sidebar a:hover{
-    background-color: #7c0e97;
+    background-color: #5b1b74;
     color: white;
 }
 
@@ -245,3 +245,74 @@ header{
 .sidebar:not(.menu-toggle) .section-title{
     display: none;
 }
+
+.sidebar-profile{
+  margin: 14px 10px 18px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #efe5f7;           
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar{
+  position: relative;
+  width: 44px;
+  height: 60px;
+  flex: 0 0 44px;
+}
+
+.avatar img{
+  width: 44px;
+  height: auto;
+  border-radius: 60%;
+  object-fit: cover;
+  display: block;
+}
+
+.avatar .status{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 10px;
+  height: 10px;
+  background: #2ecc71;            
+  border: 2px solid #efe5f7;        
+  border-radius: 50%;
+}
+
+.profile-text{
+  min-width: 0;
+}
+
+.profile-name{
+  font-weight: 700;
+  color: #2b2b2b;
+  font-size: 14px;
+  line-height: 1.1;
+}
+
+.profile-role{
+  font-size: 12px;
+  color: #6b6b6b;
+  margin-top: 3px;
+}
+
+
+.sidebar a.active{
+  background: #5b1b74;             
+  color: #fff;
+  box-shadow: 0 10px 18px rgba(0,0,0,0.12);
+  border-radius: 12px;
+}
+
+.sidebar a.active svg{
+  stroke: #fff;
+  fill: rgba(255,255,255,0.9);
+}
+
+.sidebar:not(.menu-toggle) .sidebar-profile{
+  display: none;
+}
+  
