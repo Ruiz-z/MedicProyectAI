@@ -1,12 +1,18 @@
-.wrapper {
+:root{
+     --nav-collapsed: 64px;
+     --header-h: 56px
+}  
+wrapper {
     
-    max-width: 1300;
+    max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 20px;
     padding-right: 20px;
     box-sizing: border-box;
 }
+
+*{box-sizing: border-box;}
 body {
     margin: 0;
     min-height: 100vh;
@@ -53,7 +59,7 @@ footer{
     width: 90%;
     padding: 6px;
     margin-bottom: 15px;
-    border: 1 px solid #ffffff;
+    border: 1px solid #ffffff;
     border-radius: 5px;
     box-sizing: border-box;
 }
@@ -73,83 +79,58 @@ footer{
 
 .login-card a{
     display: block;
-    margin-top: 15 px;
+    margin-top: 15px;
     font-size: 14px;
     color: #007bff;
     margin-bottom: 12px;
 }
 
-.card {
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    overflow: hidden;
-    font-family: sans-serif;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 15px;
-}
-
-.card-title {
-    margin: 0 0 10px;
-}
-
-.card-text {
-    color: #555;
-    font-size: 1rem;
-    margin-bottom: 15px;
-}
-
-.card-btn {
-    text-decoration: none;
-    background-color: #007bff;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-}
 
 header{
-    z-index: 200;
+    height: var(--header-h);
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0.45rem 2rem 0.45rem 1.27rem;
-    border-bottom: 1px #7c0e97 ;
-    position: fixed;
+    align-items: center;
+    padding: 0;
     background-color: white;
+    border-bottom: 1px solid white;
+    z-index: 200;
 }
+
 
 .left{
+    width: var(--nav-collapsed);
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 1.4rem;
-
+    align-items: center;
 }
 
-
 .menu-container{
-
-    height: 100%;
     display: flex;
     align-items: center;
     cursor: pointer;
 
 }
 
+.menu div{
+    width: 100%;
+    height: 0.15rem;
+    background-color: white;
+    transition: all 0.2s ease;
+}
+.menu.menu-toggle div:first-child{
+    width: 40%;
+    transform: rotate(-35deg) translate(-30%,175%);
+}
 
+.menu.menu-toggle div:last-child{
+    width: 40%;
+    transform: rotate(-35deg) translate(-30%,160%);
+}
 .brand{
    
     display: flex;
@@ -161,7 +142,7 @@ header{
    
     font-size: 1.5rem;
     font-weight: 900;
-    color:#020000;
+
 }
 
 
@@ -175,35 +156,74 @@ header{
 }
 
 .sidebar{
-    margin-top: 4rem;
-    width: 4rem;
-    height: 100%;
     position: fixed;
-    top: 0;
     left: 0;
+    top: var(--header-h);
+    height: calc(100vh - var(--header-h));
+    width: var(--nav-collapsed);
+    background: white;
     z-index: 100;
-    padding: 1.1rem 0;
-    
+    padding: 10px 0;
+    overflow-x: hidden;
+    transition: width 0.35s ease;
 }
-
 .sidebar.menu-toggle{
     width: 18.75rem;
 }
 
 .sidebar a{
-    display: flex;
-    align-items: center;
-    gap: 1.3rem;
-    padding: 0.9rem 0.7rem;
-    text-decoration: none;
-    margin: 0 0.5rem;
-    border-radius: 0.5rem;
-    white-space: nowrap;
-    overflow: hidden;
-    color: #555;
+  height: 48px;
+  margin: 6px -30px;          
+  padding: 0 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #8a8a8a;
+  text-decoration: none;
+  white-space: nowrap;
+  color:#666;
+  transition: background-color .2 ease, color .2s ease
+}
+
+
+.sidebar a svg{
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  display: block;
+}
+
+.sidebar:not(.menu-toggle) a{
+  justify-content: flex-start;
+  padding-left: 14px;
+  gap: 0;
+}
+
+.sidebar:not(.menu-toggle) a span{
+  display: none;
+}
+
+
+.sidebar a:hover{
+  background-color: #7c0e97;
+  color: rgb(170, 170, 170);
+}
+
+.sidebar a:hover svg{
+  stroke: white;
+  fill: rgba(255, 255, 255, 0.753);
 }
 
 .sidebar a:hover{
     background-color: #7c0e97;
     color: white;
+}
+
+.content{
+  padding-top: var(--header-h);
+  padding-left: var(--nav-collapsed);
+}
+.sidebar.menu-toggle ~ .content{
+  padding-left: 18.75rem;
 }
