@@ -139,11 +139,12 @@
                 <p>Arrastre y suelte archivos DICOM, rayos X, resonancias magnéticas o imágenes dermoscópicas aquí.</p>
 
                 <div class="upload-actions">
-                    <button class="btn-primary">Seleccionar Archivo</button>
+                    <button class="btn-primary" id="btnFile">Seleccionar Archivo</button>
                     <span class="or">o</span>
-                    <button class="btn-secondary">Abrir Cámara</button>
+                    <button class="btn-secondary" id="btnCam">Abrir Cámara</button>
                 </div>
-
+                <input id="fileInput" type="file" accept="image/*" hidden>
+                
                 <div class="upload-foot">Formatos soportados: .dcm, .jpg, .png (Max 50MB)</div>
             </div>
 
@@ -156,16 +157,16 @@
                 <h2>Resultados y Recomendaciones</h2>
             </div>
 
-            <div class="card info-card">
-                <div class="info-title">Esperando Datos</div>
-                <div class="info-text">
+            <div class="card info-card" id="rigth-status">
+                <div class="info-title" id="rigth-title">Esperando Datos</div>
+                <div class="info-text" id="rigth-text">
                     El sistema generará probabilidades diagnósticas una vez que se cargue y analice una imagen válida.
                 </div>
             </div>
 
             <div class="confidence">
                 <div class="label">CONFIANZA DEL MODELO</div>
-                <div class="bar"></div>
+                <div class="bar"><div id="rigth-conf-fill" class="rigth-conf-fill"></div></div>
             </div>
 
             <div class="steps">
@@ -189,7 +190,9 @@
             </div>
         </aside>
     </main>
-
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script src="/Front/Javascript/ia.js"></script>
     <script src="/Front/Javascript/script.js"></script>
 </body>
 
