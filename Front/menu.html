@@ -195,7 +195,6 @@
 
         </section>
 
-        <!-- DERECHA -->
         <aside class="right">
             <div class="right-header">
                 <h2>Resultados y Recomendaciones</h2>
@@ -219,17 +218,17 @@
 
             <div class="steps">
                 <div class="steps-title">Posibles Pasos Siguientes</div>
-                <div class="step-card"></div>
-                <div class="step-card"></div>
+                <div class="step-card" id="step-1"></div>
+                <div class="step-card" id="step-2"></div>
+
             </div>
 
             <div class="card protocol">
                 <div class="protocol-title">Protocolo Estándar</div>
-                <div class="protocol-text">
-                    Para casos dermatológicos, recuerde utilizar iluminación constante y marcador de escala si está
-                    disponible.
-                </div>
-                <a class="protocol-link" href="#">Ver guías completas ↗</a>
+                <div class="protocol-text" id="protocol-text"></div>
+                <a class="protocol-link" id="protocol-link" href="#" target="_blank" rel="noopener">
+                    Ver guías completas ↗
+                </a>
             </div>
 
             <div class="legal">
@@ -240,7 +239,8 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.16.0/dist/tf.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8.5/dist/teachablemachine-image.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8.5/dist/teachablemachine-image.min.js"></script>
     <script src="/Front/Javascript/ia.js"></script>
     <script src="/Front/Javascript/script.js"></script>
 
