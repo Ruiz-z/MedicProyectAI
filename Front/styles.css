@@ -786,6 +786,75 @@ header{
 }
 
 
+.menu-page .right-results{
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.menu-page .right-results .result-top{
+  background: #ffffff;
+  border: 1px solid #eadcf9;
+  border-radius: 14px;
+  padding: 14px 14px;
+}
+
+.menu-page .right-results .result-top .name{
+  font-size: 22px;
+  font-weight: 900;
+  color: #1f2937;
+  margin: 0;
+}
+
+.menu-page .right-results .result-top .pct{
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #5b1b74;
+}
+
+
+.menu-page .right-results .result-list{
+  display: grid;
+  gap: 8px;
+}
+
+.menu-page .right-results .result-item{
+  background: #fffaf3;
+  border: 1px solid #efe5d7;
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-page .right-results .result-item .label{
+  font-weight: 800;
+  color: #111827;
+}
+
+.menu-page .right-results .result-item .value{
+  font-weight: 900;
+  color: #5b1b74;
+}
+
+.menu-page .right-results{
+  max-height: 360px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.menu-page .right-results::-webkit-scrollbar{
+  width: 8px;
+}
+.menu-page .right-results::-webkit-scrollbar-thumb{
+  background: rgba(91, 27, 116, 0.25);
+  border-radius: 10px;
+}
+
+
 @media (max-width: 1180px){
   .menu-page .app{
     grid-template-columns: 1fr;
