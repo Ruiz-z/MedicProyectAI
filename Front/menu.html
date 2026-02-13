@@ -109,6 +109,20 @@
                         <span>Configuración</span>
                     </a>
                 </ul>
+                <ul>
+                    <a href="index.html" id="logoutBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="#a3a3a3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-logout-2">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M10 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2" />
+                            <path d="M15 12h-12l3 -3" />
+                            <path d="M6 15l-3 -3" />
+                        </svg>
+                        <span>Cerrar sesión</span>
+                    </a>
+                </ul>
+
             </div>
         </nav>
 
@@ -158,10 +172,9 @@
                 <a class="patient-action" href="#">Cambiar Paciente</a>
             </div>
 
-            <!-- UPLOAD -->
             <div class="upload-area">
 
-                <!-- ZONA ROJA: aquí se renderiza cámara/imagen y aquí se queda -->
+
                 <div id="hero-preview" class="hero-preview">
                     <div class="hero-placeholder">
                         <div class="upload-icon">
@@ -243,7 +256,11 @@
         src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8.5/dist/teachablemachine-image.min.js"></script>
     <script src="/Front/Javascript/ia.js"></script>
     <script src="/Front/Javascript/script.js"></script>
-
+    <script>
+        if (localStorage.getItem("auth") !== "true") {
+            window.location.href = "index.html";
+        }
+    </script>
 </body>
 
 </html>
